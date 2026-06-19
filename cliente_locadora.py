@@ -10,6 +10,7 @@ class ClienteLocadora(ModeloBase):
 
     nome = db.Column(db.String(100), nullable=False)
     cpf = db.Column(db.String(14), nullable=False, unique=True)
+    cnh = db.Column(db.String(20), nullable=False, unique=True)
 
     locacoes = db.relationship(
         "Locacao",
